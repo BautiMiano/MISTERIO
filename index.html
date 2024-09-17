@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>¿Me amas?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="question">
+        <h1>¿Me amas?</h1>
+        <button onclick="loveMe()">Me amas</button>
+        <button onclick="wrongAnswer()">No me amas</button>
+        <p id="message"></p>
+    </div>
+
+    <div id="flower" style="display: none;">
+        <div class="flower">
+            <div class="petal petal1"></div>
+            <div class="petal petal2"></div>
+            <div class="petal petal3"></div>
+            <div class="petal petal4"></div>
+            <div class="petal petal5"></div>
+            <div class="petal petal6"></div>
+            <div class="petal petal7"></div>
+            <div class="petal petal8"></div>
+            <div class="petal petal9"></div>
+            <div class="center"></div>
+        </div>
+    </div>
+
+    <script>
+        function loveMe() {
+            document.getElementById("question").style.display = "none";
+            document.getElementById("flower").style.display = "block";
+        }
+
+        function wrongAnswer() {
+            document.getElementById("message").innerText = "Respuesta incorrecta. Inténtalo de nuevo.";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff; /* Azul cielo suave */
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #ffeb3b;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcc00;
+}
+
+#message {
+    color: red;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.flower {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.petal {
+    position: absolute;
+    width: 120px;
+    height: 160px;
+    background: radial-gradient(circle at 50% 0%, #ffeb3b, #ffcc00); /* Degradado para los pétalos */
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom center;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    animation: sway 3s ease-in-out infinite alternate; /* Movimiento de balanceo */
+}
+
+@keyframes sway {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(5deg); }
+}
+
+/* Disposición circular de los pétalos */
+.petal1 { top: 0; left: 50%; transform: translateX(-50%) rotate(0deg); }
+.petal2 { top: 10%; left: 15%; transform: rotate(45deg); }
+.petal3 { top: 10%; right: 15%; transform: rotate(-45deg); }
+.petal4 { top: 50%; left: 0; transform: rotate(90deg); }
+.petal5 { top: 50%; right: 0; transform: rotate(-90deg); }
+.petal6 { bottom: 10%; left: 15%; transform: rotate(135deg); }
+.petal7 { bottom: 10%; right: 15%; transform: rotate(-135deg); }
+.petal8 { bottom: 0; left: 50%; transform: translateX(-50%) rotate(180deg); }
+.petal9 { top: 25%; left: 50%; transform: translateX(-50%) rotate(20deg); }
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ff8c00, #ff4500); /* Degradado para el centro */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 20px rgba(255, 69, 0, 0.6);
+    animation: glow 3s infinite ease-in-out; /* Brillo pulsante */
+}
+
+@keyframes glow {
+    0% { box-shadow: 0px 10px 20px rgba(255, 69, 0, 0.6); }
+    100% { box-shadow: 0px 20px 30px rgba(255, 69, 0, 0.9); }
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 1170px) {
+    .flower {
+        width: 220px;
+        height: 220px;
+    }
+
+    .petal {
+        width: 90px;
+        height: 130px;
+    }
+
+    .center {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .flower {
+        width: 180px;
+        height: 180px;
+    }
+
+    .petal {
+        width: 70px;
+        height: 100px;
+    }
+
+    .center {
+        width: 60px;
+        height: 60px;
+    }
+}
